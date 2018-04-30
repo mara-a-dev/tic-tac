@@ -18,6 +18,16 @@ body{
   font-weight:bold;
   
 }
+
+.new{
+  position:absolute;
+  top:10px;
+  left:250px;
+  display:block;
+  padding:10x;
+  border-radius:5px;
+}
+
 .inner-container{
   padding:10px;
   width:300px;
