@@ -52,6 +52,19 @@ class Game extends React.Component {
     };
   }
   
+  restartGame() {
+    this.setState({
+      history: [
+        {
+          squares: Array(9).fill(null)
+        }
+      ],
+      stepNumber: 0,
+      xIsNext: true
+    })
+    console.log('blajhhhh')
+  }
+  
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
@@ -102,6 +115,7 @@ class Game extends React.Component {
       <div className="inner-container">
         <div className="info">
           <div className="status">{status}</div>
+          <button className ="new" onClick={() => this.restartGame()}>NEW</button>
         </div>
         <div className="board">
           <Board squares={current.squares} onClick={i => this.handleClick(i)} />
